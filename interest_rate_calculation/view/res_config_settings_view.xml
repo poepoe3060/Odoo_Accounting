@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="accounting_res_config_settings_view_form_inherit" model="ir.ui.view">
+        <field name="name">accounting.res.config.settings.view.form.inherit</field>
+        <field name="model">res.config.settings</field>
+        <field name="priority" eval="40"/>
+        <field name="inherit_id" ref="account.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[hasclass('settings')]/div[hasclass('app_settings_block')][@data-key='account']" position="inside">
+<!--                <h2>Interest</h2>-->
+<!--                <div class="row mt16 o_settings_container">-->
+<!--                    <div class="col-12 col-lg-6 o_setting_box"-->
+<!--                         title="Interest">-->
+<!--                        <div class="o_setting_left_pane"/>-->
+<!--                        <div class="o_setting_right_pane">-->
+<!--                            <span class="o_form_label">Default Whole Sale Discount Account</span>-->
+<!--                            <div class="text-muted">-->
+<!--                                Default discounts applied to local transactions-->
+<!--                            </div>-->
+<!--                            <div class="content-group">-->
+<!--                                <div class="row mt16">-->
+<!--                                    <label string="Is Interest" for="is_interest"-->
+<!--                                           class="col-lg-3 o_light_label"/>-->
+<!--                                    <field name="is_interest" force_save="1"/>-->
+<!--                                    <label string="Rate" for="interest_rate"-->
+<!--                                           class="col-lg-3 o_light_label"/>-->
+<!--                                    <field name="interest_rate" force_save="1" attrs="{'invisible':[('is_interest','=',False)]}"/>-->
+<!--                                </div>-->
+<!--                            </div>-->
+                            <h2>Interest</h2>
+                            <div class="row mt16 o_settings_container" id="interest">
+                                <div class="col-12 col-lg-6 o_setting_box"
+                                id="enable_storno_accounting"
+                                title="Allows you to set interest rate">
+                                    <div class="o_setting_left_pane">
+                                        <field name="is_interest" force_save="1"/>
+                                    </div>
+                                    <div class="o_setting_right_pane">
+                                        <label for="interest_rate" />
+                                        <field name="interest_rate" force_save="1" attrs="{'invisible':[('is_interest','=',False)]}"/>
+                                    </div>
+                                </div>
+                            </div>
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+            </xpath>
+        </field>
+    </record>
+
+
+</odoo>
