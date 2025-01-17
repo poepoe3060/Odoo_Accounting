@@ -1,2 +1,2 @@
 # Odoo-Accounting
-Some of my customized modules for Odoo Accounting.
+Odoo Accounting Process Customizations
